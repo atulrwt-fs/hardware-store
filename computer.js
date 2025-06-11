@@ -56,10 +56,10 @@ const getLocationCharge = (location, mb, cpu, ram, gpu) => {
 const main = () => {
     const baseComputerPrice = 200;
 
-    const motherboard = getComponentPrice(200, motherboardAddons())
-    const cpu = getComponentPrice(200, cpuAddons())
-    const gpu = getComponentPrice(300, gpuAddons())
-    const ram = getComponentPrice(100, ramAddons())
+    const motherboard = getComponentPrice(200, motherboardAddons());
+    const cpu = getComponentPrice(200, cpuAddons());
+    const gpu = getComponentPrice(300, gpuAddons());
+    const ram = getComponentPrice(100, ramAddons());
 
     const location = "Compression Land";
     const MBValue = motherboard(["LEDs for switches", "DDR-5 Memory Modules"]);
@@ -68,9 +68,9 @@ const main = () => {
     const GPUValue = gpu();
 
     const totalComponentValue = MBValue + CPUValue + RamValue + GPUValue;
-    const locationCost = getLocationCharge(location, MBValue, CPUValue, RamValue, GPUValue)
+    const locationCost = getLocationCharge(location, MBValue, CPUValue, RamValue, GPUValue);
 
     return locationCost + baseComputerPrice + totalComponentValue + (0.2 * totalComponentValue);
 }
 
-console.log(main())
+console.log(main());
