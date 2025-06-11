@@ -1,1 +1,1 @@
-# hardware-store
+# hardware-storefirst line in readme
